@@ -14,11 +14,16 @@
         <section class="to-do-form">
                 <label class="displace" for="to-do-name">TO-DO</label>
                 <input type="to-do-name" name="to-do-name" id="to-do-name" placeholder="TO-DO" required autofocus>
-                <div class="date-div">
-                <label class="date-label" for="date">Set Date</label>
-                <input type="date" name="date" id="date" required placeholder="Select Date">
-                <label class="time-label" for="time">Set Time</label>
-                <input type="time" name="time" id="time" required>
+                <div class="date-time-div">
+                    <div class="date-div">
+                        <label class="date-label" for="date">Set Date</label>
+                        <input type="date" name="date" id="date" required placeholder="Select Date">
+                    </div>
+                    <div class="time-div">
+                        <label class="time-label" for="time">Set Time</label>
+                        <input type="time" name="time" id="time" required>
+                    </div>
+                
                 </div>
                 <p class="error-handling js-error-handling">Incomplete form!</p>
                 <input type="submit" name="submit" id="submit" value="SAVE">
