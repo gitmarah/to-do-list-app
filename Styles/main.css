@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-label{
+.displace{
     position: absolute;
     left: -10000000px;
 }
@@ -34,7 +34,7 @@ main{
     padding-bottom: 0.8rem;
     align-items: center;
 }
-#to-do-name, #date, #time, #submit{
+#to-do-name, #submit{
     width: 100%;
     padding: 0.8rem;
     border: 2px solid #724f53;
@@ -42,6 +42,16 @@ main{
     font-size: 1.2em;
     background-color: transparent;
     outline: none;
+}
+#date, #time{
+    padding: 0.8rem;
+    border: 2px solid #724f53;
+    border-radius: 5px;
+    font-size: 1.2em;
+    background-color: transparent;
+    outline: none;
+    color: transparent;
+    width: 50px;
 }
 #submit{
     background-color: rgb(0, 65, 16);

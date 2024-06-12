@@ -12,12 +12,14 @@
     <h1>TELA LIST</h1>
     <main class="main-container">
         <section class="to-do-form">
-                <label for="to-do-name">TO-DO</label>
+                <label class="displace" for="to-do-name">TO-DO</label>
                 <input type="to-do-name" name="to-do-name" id="to-do-name" placeholder="TO-DO" required autofocus>
-                <label for="date">DATE</label>
-                <input type="date" name="date" id="date" required>
-                <label for="time">TIME</label>
+                <div class="date-div">
+                <label class="date-label" for="date">Set Date</label>
+                <input type="date" name="date" id="date" required placeholder="Select Date">
+                <label class="time-label" for="time">Set Time</label>
                 <input type="time" name="time" id="time" required>
+                </div>
                 <p class="error-handling js-error-handling">Incomplete form!</p>
                 <input type="submit" name="submit" id="submit" value="SAVE">
         </section>
