@@ -1,7 +1,9 @@
-const todos = [
-];
-if(JSON.parse(localStorage.getItem(todos))){
-    todos = JSON.parse(localStorage.getItem(todos))
+let todos;
+if(JSON.parse(localStorage.getItem('todos'))){
+    todos = JSON.parse(localStorage.getItem('todos'))
+    console.log(todos);
+}else{
+    todos = [];
 }
 const todoField = document.getElementById("to-do-name");
 const dateField = document.getElementById("date");
