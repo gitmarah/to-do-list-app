@@ -1,7 +1,6 @@
 let todos;
 if(JSON.parse(localStorage.getItem('todos'))){
-    todos = JSON.parse(localStorage.getItem('todos'))
-    console.log(todos);
+    todos = JSON.parse(localStorage.getItem('todos'));
 }else{
     todos = [];
 }
@@ -27,7 +26,6 @@ function displayTodo(){
     const deleteBtns = document.querySelectorAll(".delete-btn");
     deleteBtns.forEach((deleteBtn, index) => { 
         deleteBtn.addEventListener('click', () => {
-            console.log("Deleted"); 
             todos.splice(index, 1);
             const newTodos = JSON.parse(localStorage.getItem('todos'));
             newTodos.splice(index, 1);

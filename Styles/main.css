@@ -46,18 +46,21 @@ main{
 #date, #time{
     content: "ddds";
     padding: 0.8rem;
+    padding-left: 50%;
     border: 2px solid #121d31;
     border-radius: 5px;
     font-size: 1.2em;
     background-color: #121d31;
     outline: none;
-    color: transparent;
+    color: aliceblue;
+    font-family: 'Roboto',sans-serif;
     width: 100%;
 }
 ::-webkit-calendar-picker-indicator{
     background-color: aliceblue;
     padding: 0.5rem;
     border-radius: 0.5rem;
+    cursor: pointer;
 }
 .date-time-div{
     width: 100%;
@@ -73,6 +76,7 @@ main{
     justify-content: left;
     border-radius: 5px;
     position: relative;
+    cursor: pointer;
 }
 .date-label, .time-label{
     position: absolute;
