@@ -42,15 +42,18 @@ nav{
     color: aliceblue;
     /* width: 1.5em; */
 }
-.fa-facebook, .fa-whatsapp{
+.fa-facebook{
     font-size: 2.5em;
 
+}
+.fa-whatsapp{
+    font-size: 2.8em;
 }
 .fa-youtube{
     font-size: 3em;
 }
 main{
-    padding: 3.8rem 0.5rem;
+    padding: 4rem 0.5rem 0.5rem;
 }
 .to-do-form{
     display: flex;
