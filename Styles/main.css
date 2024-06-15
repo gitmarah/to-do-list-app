@@ -19,24 +19,44 @@ body{
     background-color: aliceblue;
     font-family: 'Roboto', sans-serif;
 }
-h1{
+header{
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     background-color: #121d31;
     color: aliceblue;
-    font-size: 1.5em;
+    font-size: 0.6em;
     padding: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+nav{
+    display: flex;
+    align-items: center;
+    column-gap: 0.8rem;
+}
+.fa-brands{
+    color: aliceblue;
+    /* width: 1.5em; */
+}
+.fa-facebook, .fa-whatsapp{
+    font-size: 2.5em;
+
+}
+.fa-youtube{
+    font-size: 3em;
 }
 main{
-    padding: 4.3rem 0.8rem;
+    padding: 3.8rem 0.5rem;
 }
 .to-do-form{
     display: flex;
     flex-direction: column;
     row-gap: 0.5rem;
-    padding-bottom: 0.8rem;
+    padding-bottom: 0.5rem;
     align-items: center;
 }
 #to-do-name, #submit{
@@ -115,7 +135,7 @@ main{
     height: fit-content;
     padding: 0.8rem;
     border-radius: 5px;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.5rem;
 }
 
 .to-dos p{
