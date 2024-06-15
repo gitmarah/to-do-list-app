@@ -18,7 +18,14 @@ setInterval(displayTodo, 60000);
 function displayTodo(){
     updateTimeLeft();
     todoDisplay.innerHTML = '';
-    todos.forEach((todo) => {
+    todos.forEach((todo, index) => {
+        if (todo.minutes < 0){
+            todos.splice(index, 1);
+            const newTodos = JSON.parse(localStorage.getItem('todos'));
+            newTodos.splice(index, 1);
+            localStorage.setItem('todos', JSON.stringify(newTodos));
+            displayTodo();
+        }
         todoDisplay.innerHTML += `
             <section class="to-dos">
                 <p class="to-do-name">${todo.todoName}</p>
@@ -98,10 +105,10 @@ function updateTimeLeft(){
     todos.forEach((todo) => {
         const currentDate = new Date();
         const timeDifference = Date.parse(todo.formattedDate) - currentDate;
-        const days = Math.round(timeDifference / (1000*60*60*24));
-        const hours = Math.round(timeDifference % (1000*60*60*24) / (1000*60*60));
-        const minutes = Math.round(timeDifference % (1000*60*60) / (1000*60));
-        const seconds = Math.round(timeDifference % (1000*60) / 1000);
+        const days = Math.floor(timeDifference / (1000*60*60*24));
+        const hours = Math.floor(timeDifference % (1000*60*60*24) / (1000*60*60));
+        const minutes = Math.floor(timeDifference % (1000*60*60) / (1000*60));
+        const seconds = Math.floor(timeDifference % (1000*60) / 1000);
         todo.days = days;
         todo.hours = hours;
         todo.minutes = minutes;
