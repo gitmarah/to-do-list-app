@@ -130,6 +130,12 @@ main{
 }
 .error-handling{
     display: none;
+    text-align: center;
+}
+.css-error{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 0.5rem;
 }
 
 

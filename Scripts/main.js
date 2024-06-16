@@ -1,3 +1,5 @@
+"use strict";
+
 //GLOBAL VARIABLES
 const todoField = document.getElementById("to-do-name");
 const dateField = document.getElementById("date");
@@ -81,7 +83,7 @@ function addTodo(){
     inputDate.setHours(timeArray[0], timeArray[1]);
     
     //INPUT VALIDATION
-    if(todoField.value === '' || dateField.value === '' || dateField.value === ''){
+    if(todoField.value === '' || dateField.value === '' || timeField.value === ''){
         document.querySelector('.js-error-handling')
             .style.color = '#e11727';
         document.querySelector('.js-error-handling')
@@ -105,7 +107,7 @@ function addTodo(){
             hours: 0,
             minutes: 0,
         }
-        
+
         //ADDS TO-DO & SENDS TO LOCALSTORAGE
         todos.push(newTodo);
         localStorage.setItem('todos', JSON.stringify(todos));
