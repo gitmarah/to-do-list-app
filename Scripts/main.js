@@ -19,7 +19,7 @@ if(JSON.parse(localStorage.getItem('todos'))){
 
 //DISPLAYS TODO
 displayTodo();
-setInterval(displayTodo, 60000);
+setInterval(displayTodo, 40000);
 
 //METHOD TO DISPLAY TODO
 function displayTodo(){
@@ -29,11 +29,15 @@ function displayTodo(){
 
         //SENDS NOTIFICATION
         if(todo.minutes === 0 && todo.days === 0 && todo.hours === 0){
-            const notification = new Notification("Tela Todo List", {
-                body: `You have a TO-DO: ${todo.todoName} at ${todo.time}`,
-                icon: "TelaStudio Logo.png",
-                tag: "Alarm sent",
-            });
+            Notification.requestPermission().then(perm =>{
+                if(perm === "granted"){
+                    const notification = new Notification("Tela Todo List", {
+                        body: `You have a TO-DO: ${todo.todoName} at ${todo.time}`,
+                        icon: "TelaStudio Logo.png",
+                    });
+                }
+            })
+            
         }
 
         //DELETES TODO AUTOMATICALLY
